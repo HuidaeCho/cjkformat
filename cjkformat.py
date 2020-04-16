@@ -27,7 +27,7 @@ import unicodedata
 
 def width(s):
     '''
-    Returns the display length of a string that may include wide CJK
+    Returns the display width of a string that may include wide CJK
     characters.
 
     Arguments:
@@ -42,7 +42,7 @@ def width(s):
 
 def wide_count(s):
     '''
-    Returns the number of wide CJK characters.
+    Returns the number of wide CJK characters in a string.
 
     Arguments:
         s (str): string
