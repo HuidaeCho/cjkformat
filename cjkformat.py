@@ -25,7 +25,7 @@
 import re
 import unicodedata
 
-def len(s):
+def width(s):
     '''
     Returns the display length of a string that may include wide CJK
     characters.
@@ -52,43 +52,46 @@ def wide_count(s):
     '''
     return sum(unicodedata.east_asian_width(c) in 'WF' for c in s)
 
-def f(fmt, vals=[]):
+def f(fmt, *args):
     '''
     Adjusts fixed-width string specifiers for wide CJK characters and returns a
     formatted string.
 
     Arguments:
         fmt (str): format string
-        vals (list): list of values for the format string (default empty)
+        *args: arguments for the format string
 
     Returns:
         Formatted string (str)
     '''
-    i = 0
     matches = []
     for m in re.finditer('%(?:(-?)([0-9.]*))?([a-z%])', fmt):
         matches.append(m)
+    if len(matches) != len(args):
+        raise Exception('The numbers of format specifiers and arguments do not match')
+
+    i = len(args) - 1
     for m in reversed(matches):
         a = m.group(1)
         w = m.group(2)
         t = m.group(3)
         if t == 's' and w:
             w = int(w)
-            v = vals[i]
+            v = args[i]
             w -= wide_count(v)
             fmt = ''.join((fmt[:m.start()], '%', a, str(w), t, fmt[m.end():]))
-        i += 1
-    return fmt % vals
+        i -= 1
+    return fmt % args
 
-def printf(fmt, vals=[]):
+def printf(fmt, *args):
     '''
-    Prints the formatted string of print(fmt % vals).
+    Prints the formatted string of print(fmt % args).
 
     Arguments:
         fmt (str): format string
-        vals (list): list of values for the format string (default empty)
+        *args: arguments for the format string
 
     Returns:
         None
     '''
-    print(f(fmt, vals))
+    print(f(fmt, *args))
