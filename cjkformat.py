@@ -85,7 +85,8 @@ def f(fmt, *args):
 
 def printf(fmt, *args):
     '''
-    Prints the formatted string of print(fmt % args).
+    Prints the formatted string of print(fmt % args, end='') just like printf()
+    in C.
 
     Arguments:
         fmt (str): format string
@@ -94,4 +95,4 @@ def printf(fmt, *args):
     Returns:
         None
     '''
-    print(f(fmt, *args))
+    print(f(fmt, *args), end='')
