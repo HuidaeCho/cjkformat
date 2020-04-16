@@ -36,7 +36,9 @@ def len(s):
     Returns:
         Display length of s (int)
     '''
-    return sum([1 + (unicodedata.east_asian_width(c) in 'WF') for c in s])
+    # https://www.programcreek.com/python/example/5938/unicodedata.east_asian_width
+    # https://sarc.io/index.php/development/810-python-print-format-padding
+    return sum(1 + (unicodedata.east_asian_width(c) in 'WF') for c in s)
 
 def wide_count(s):
     '''
@@ -48,7 +50,7 @@ def wide_count(s):
     Returns:
         Number of wide CJK characters (int)
     '''
-    return sum([(unicodedata.east_asian_width(c) in 'WF') for c in s])
+    return sum(unicodedata.east_asian_width(c) in 'WF' for c in s)
 
 def f(fmt, vals=[]):
     '''
