@@ -42,7 +42,7 @@ def width(s):
 
 def wide_count(s):
     '''
-    Returns the number of wide CJK characters.
+    Returns the number of wide CJK characters in a string.
 
     Arguments:
         s (str): string
