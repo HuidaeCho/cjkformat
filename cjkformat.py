@@ -87,8 +87,8 @@ def f(fmt, *args):
 
 def printf(fmt, *args):
     '''
-    Prints the formatted string of print(fmt % args, end='') just like printf()
-    in C. Does not add a newline.
+    Prints the formatted string of print(fmt % args, end='') similar to
+    printf() in C. Note that this function does not add a newline.
 
     Arguments:
         fmt (str): format string
