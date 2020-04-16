@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 ################################################################################
-# Name:     CJK Format
-# Requires: re, unicodedata
-# Author:   Huidae Cho
-# Since:    April 15, 2020
+# Name:         CJK Format
+# Repository:   https://github.com/HuidaeCho/cjkformat
+# Requires:     re, unicodedata
+# Author:       Huidae Cho
+# Since:        April 15, 2020
 #
 # Copyright (C) 2020, Huidae Cho <https://idea.isnew.info>
 #
