@@ -65,21 +65,23 @@ def f(fmt, *args):
         Formatted string (str)
     '''
     matches = []
-    for m in re.finditer('%(?:(-?)([0-9.]*))?([a-z%])', fmt):
+    # https://docs.python.org/3/library/stdtypes.html#old-string-formatting
+    for m in re.finditer('%([#0 +-]*)([0-9]*)(\.[0-9]*)?([hlL]?[diouxXeEfFgGcrsa%])', fmt):
         matches.append(m)
+
     if len(matches) != len(args):
         raise Exception('The numbers of format specifiers and arguments do not match')
 
     i = len(args) - 1
     for m in reversed(matches):
-        a = m.group(1)
+        f = m.group(1)
         w = m.group(2)
-        t = m.group(3)
-        if t == 's' and w:
-            w = int(w)
-            v = args[i]
-            w -= wide_count(v)
-            fmt = ''.join((fmt[:m.start()], '%', a, str(w), t, fmt[m.end():]))
+        p = m.group(3) or ''
+        c = m.group(4)
+        print(f, w, p, c)
+        if c == 's' and w:
+            w = str(int(w) - wide_count(args[i]))
+            fmt = ''.join((fmt[:m.start()], '%', f, w, p, c, fmt[m.end():]))
         i -= 1
     return fmt % args
 
