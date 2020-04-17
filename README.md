@@ -23,6 +23,7 @@ which will print nicely aligned
 ![Aligned output](aligned.png "Aligned output")
 
 However, it would be very cumbersome to count CJK characters and adjust widths in the format string every time we use CJK characters. I found some solutions from these articles:
+* [CJKStr -- A Simple Package for Processing CJK string](https://pypi.org/project/cjkstr/)
 * [Python unicodedata.east_asian_width() Examples](https://www.programcreek.com/python/example/5938/unicodedata.east_asian_width) and
 * [파이썬(Python)으로 한글 print format 설정 시 padding이 잘 맞지 않을 때](https://sarc.io/development/810-python-print-format-padding),
 
