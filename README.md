@@ -32,6 +32,8 @@ In this module, I tried to mimic the usage of `print()` as much as possible. Sin
 
 Now, using the new `f()` function, the above example would be
 ```python
+from cjkformat import f
+
 print(f('%-10s|%-10s|', 'ab', 'cd'))
 print(f('%-10s|%-10s|', '가나다라', '마바사아'))
 ```
@@ -43,6 +45,8 @@ Note that the `f()` function takes both the format and arguments. Also, unlike `
 
 Equivalently, using `printf()`,
 ```python
+from cjkformat import printf
+
 printf('%-10s|%-10s|\n', 'ab', 'cd')
 printf('%-10s|%-10s|\n', '가나다라', '마바사아')
 ```
