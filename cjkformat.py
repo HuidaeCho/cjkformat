@@ -78,7 +78,6 @@ def f(fmt, *args):
         w = m.group(2)
         p = m.group(3) or ''
         c = m.group(4)
-        print(f, w, p, c)
         if c == 's' and w:
             w = str(int(w) - wide_count(args[i]))
             fmt = ''.join((fmt[:m.start()], '%', f, w, p, c, fmt[m.end():]))
