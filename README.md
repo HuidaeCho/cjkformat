@@ -9,6 +9,8 @@ This module is published in [PyPI](https://pypi.org/project/cjkformat/), so you 
 pip3 install --user cjkformat
 ```
 
+Yeah, there is no version 0.1.0 there. I had to make a small fix, but I didn't know that the same version is never allowed again even after the project is deleted.
+
 ## Introduction
 
 One of the most important features of this module is to align Latin and CJK characters using `%{width}s` specifiers. For example, you may expect the following lines
