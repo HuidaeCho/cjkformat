@@ -25,6 +25,7 @@ which will print nicely aligned
 However, it would be very cumbersome to count CJK characters and adjust widths in the format string every time we use CJK characters. I found some solutions from these articles:
 * [Python unicodedata.east_asian_width() Examples](https://www.programcreek.com/python/example/5938/unicodedata.east_asian_width) and
 * [파이썬(Python)으로 한글 print format 설정 시 padding이 잘 맞지 않을 때](https://sarc.io/development/810-python-print-format-padding),
+
 but I was not happy with any of those solutions because they deviated too much from the usage of `print()` and disrupt regular patterns of `print()`. It would also be hard to justify use of those functions to non-CJK developers when they have very different calling patterns.
 
 In this module, I tried to mimic the usage of `print()` as much as possible. Since the `%` operator is intereted first before being passed to any functions, I was not able to use exactly the same syntax as `print()`. Instead, I tried to keep the name of the core function short and simple. Indeed, its name is simply `f`, which is the same as the prefix for the f-string syntax. I also defined `printf()` that behaves much like the `printf()` function in the C language. This function combines `print(, end='')` and `f()` to not add a newline.
