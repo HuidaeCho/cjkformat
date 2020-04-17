@@ -2,7 +2,7 @@
 
 This Python 3 module provides utility functions for formatting fixed-width CJK strings.
 
-## How to install
+## Installation
 
 This module is published in [PyPI](https://pypi.org/project/cjkformat/), so you can install it using `pip3`:
 ```bash
