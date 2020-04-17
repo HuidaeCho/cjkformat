@@ -42,7 +42,7 @@ However, it would be very cumbersome to count CJK characters and adjust widths i
 
 but I was not happy with any of those solutions because they deviated too much from the usage of `print()` and disrupt regular patterns of `print()`. It would also be hard to justify use of those functions to non-CJK developers when they have very different calling patterns.
 
-In this module, I tried to mimic the usage of `print()` as much as possible. Since the `%` operator is intereted first before being passed to any functions, I was not able to use exactly the same syntax as `print()`. Instead, I tried to keep the name of the core function short and simple. Indeed, its name is simply `f`, which is the same as the prefix for the f-string syntax. I also defined `printf()` that behaves much like the `printf()` function in the C language. This function combines `print(, end='')` and `f()` to not add a newline.
+In this module, I tried to mimic the usage of `print()` as much as possible. Since the `%` operator is interpreted first before being passed to any functions, I was not able to use exactly the same syntax as `print()`. Instead, I tried to keep the name of the core function short and simple. Indeed, its name is simply `f`, which is the same as the prefix for the f-string syntax. I also defined `printf()` that behaves much like the `printf()` function in the C language. This function combines `print(, end='')` and `f()` to not add a newline.
 
 Now, using the new `f()` function, the above example would be
 ```python
