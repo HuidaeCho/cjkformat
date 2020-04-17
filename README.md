@@ -1,11 +1,22 @@
 # CJK Format
 
-This Python 3 module provides utility functions for formatting fixed-width CJK strings. One of the most important features of tihs module is to align Latin and CJK characters using `%{width}s` specifiers. For example, some developers may expect the following lines
+This Python 3 module provides utility functions for formatting fixed-width CJK strings.
+
+## How to install
+
+This module is published in [PyPI](https://pypi.org/project/cjkformat/), so you can install it using `pip3`:
+```bash
+pip3 install --user cjkformat
+```
+
+## Introduction
+
+One of the most important features of this module is to align Latin and CJK characters using `%{width}s` specifiers. For example, you may expect the following lines
 ```python
 print('%-10s|%-10s|' % ('ab', 'cd'))
 print('%-10s|%-10s|' % ('가나다라', '마바사아'))
 ```
-would produce
+to produce
 
 ![Aligned output](aligned.png "Aligned output")
 
