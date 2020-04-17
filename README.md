@@ -9,7 +9,7 @@ This module is published in [PyPI](https://pypi.org/project/cjkformat/), so you 
 pip3 install --user cjkformat
 ```
 
-Yeah, there is no version 0.1.0 there. I had to make a small fix, but I didn't know that the same version is never allowed again even after the project is deleted.
+Yeah, there is no version 0.1.0 there. I had to make a small fix, but I didn't know that the same version is never allowed again even after the project is deleted. I see one typo there in README.md, but who cares!
 
 ## Introduction
 
