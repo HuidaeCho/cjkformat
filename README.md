@@ -1,6 +1,8 @@
 # CJK Format
 
-This Python 3 module provides utility functions for formatting fixed-width CJK strings.
+This Python 3 module provides utility functions for formatting fixed-width CJK strings. Functionally, it is similar to the [libprinta](https://github.com/HuidaeCho/libprinta) (print-aligned) C library.
+
+[파이썬 3에서 한글 print 포맷 정렬하기](https://geni.isnew.info/%ED%8C%8C%EC%9D%B4%EC%8D%AC-3%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80-print-%ED%8F%AC%EB%A7%B7-%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0.html)
 
 ## Installation
 
@@ -8,6 +10,8 @@ This module is published in [PyPI](https://pypi.org/project/cjkformat/), so you 
 ```bash
 pip3 install --user cjkformat
 ```
+
+Yeah, there is no version 0.1.0 there. I had to make a small fix, but I didn't know that the same version is never allowed again even after the project is deleted. I see one typo there in README.md, but who cares!
 
 ## Introduction
 
@@ -40,7 +44,7 @@ However, it would be very cumbersome to count CJK characters and adjust widths i
 
 but I was not happy with any of those solutions because they deviated too much from the usage of `print()` and disrupt regular patterns of `print()`. It would also be hard to justify use of those functions to non-CJK developers when they have very different calling patterns.
 
-In this module, I tried to mimic the usage of `print()` as much as possible. Since the `%` operator is intereted first before being passed to any functions, I was not able to use exactly the same syntax as `print()`. Instead, I tried to keep the name of the core function short and simple. Indeed, its name is simply `f`, which is the same as the prefix for the f-string syntax. I also defined `printf()` that behaves much like the `printf()` function in the C language. This function combines `print(, end='')` and `f()` to not add a newline.
+In this module, I tried to mimic the usage of `print()` as much as possible. Since the `%` operator is interpreted first before being passed to any functions, I was not able to use exactly the same syntax as `print()`. Instead, I tried to keep the name of the core function short and simple. Indeed, its name is simply `f`, which is the same as the prefix for the f-string syntax. I also defined `printf()` that behaves much like the `printf()` function in the C language. This function combines `print(, end='')` and `f()` to not add a newline.
 
 Now, using the new `f()` function, the above example would be
 ```python
