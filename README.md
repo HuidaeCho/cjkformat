@@ -1,6 +1,6 @@
 # CJK Format
 
-This Python 3 module provides utility functions for formatting fixed-width CJK strings.
+This Python 3 module provides utility functions for formatting fixed-width CJK strings. Functionally, it is similar to the [libprinta](https://github.com/HuidaeCho/libprinta) (print-aligned) C library.
 
 [파이썬 3에서 한글 print 포맷 정렬하기](https://geni.isnew.info/%ED%8C%8C%EC%9D%B4%EC%8D%AC-3%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80-print-%ED%8F%AC%EB%A7%B7-%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0.html)
 
